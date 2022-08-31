@@ -38,7 +38,7 @@ if($pin==''){
     <meta name="author" content="">
     <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
     <link rel="shortcut icon" type="image/x-icon" href="./big-logo.ico">
-    <title>STATE BOARD OF TECHNICAL EDUCATION AND TRAINING TELANGANA</title>
+    <title>Sbtet Attendance -Developed by Nithin Godugu</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://exams.sbtet.telangana.gov.in//contents/css/bootstrap.min.css" rel="stylesheet">
