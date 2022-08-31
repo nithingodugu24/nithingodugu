@@ -24,7 +24,9 @@ $mains = json_decode($resp2, true);
 
 $name = $mains['Table'][0]['Name'];
 
-
+if($pin==''){
+    echo "pin number enter cheyyaledhu ra";
+}else{
 ?>
 
 
@@ -417,3 +419,5 @@ $name = $mains['Table'][0]['Name'];
 <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" style="display: none;" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}"></div></body></html>
 
 
+<?php
+}?>
