@@ -382,7 +382,7 @@ if($pin==''){
                     </div>
                     <div class="col-md-12">
                         <div style="color:green" class="col-md-2">
-                            <h4>Developed by Nithin Godugu</h4>
+                            <h4><a href="https://instagram.com/offi_nithingodugu">Developed by Nithin Godugu</a></h4>
                         </div>
                        
                     </div>
