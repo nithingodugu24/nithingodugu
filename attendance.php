@@ -361,7 +361,7 @@ if($pin==''){
                                     <tbody>
                                         <tr>
                                                   <td class="ng-binding"><?php echo $mains['Table'][0]['WorkingDays'];; ?></td>
-                                                 <td class="ng-binding"><?php echo $mains['Table'][0]['WorkingDays'];; ?></td>
+                                                 <td class="ng-binding"><?php echo $mains['Table'][0]['NumberOfDaysPresent'];; ?></td>
                                             <td class="ng-binding"><?php echo $mains['Table'][0]['Percentage'];; ?></td>
                                         </tr>
     
