@@ -25,7 +25,7 @@ $mains = json_decode($resp2, true);
 $name = $mains['Table'][0]['Name'];
 
 if($pin==''){
-    echo "pin number enter cheyyaledhu ra";
+    echo "enter pin number  ";
 }else{
 ?>
 
@@ -280,7 +280,7 @@ if($pin==''){
                         <div class="col-sm-12">
 
                             <div class="card-title">
-                                <h2><bold>Student Attendance  Summary</bold></h2>
+                                <h2><bold id="tesxthead">Student Attendance  Summary</bold></h2>
                             </div>
                         </div>
 
@@ -361,7 +361,7 @@ if($pin==''){
                                     <tbody>
                                         <tr>
                                                   <td class="ng-binding"><?php echo $mains['Table'][0]['WorkingDays'];; ?></td>
-                                                 <td class="ng-binding"><?php echo $mains['Table'][0]['NumberOfDaysPresent'];; ?></td>
+                                                 <td class="ng-binding"><?php echo $mains['Table'][0]['WorkingDays'];; ?></td>
                                             <td class="ng-binding"><?php echo $mains['Table'][0]['Percentage'];; ?></td>
                                         </tr>
     
@@ -372,11 +372,8 @@ if($pin==''){
                 </div>
                 
 
-                <div ng-show="ResultFound" class="">               
-
-                    
-                    
-                            
+                <div ng-show="ResultFound" class="">       
+                
                 
                 <div class="col-md-12">
                         <table class="table table-bordered  table-striped table-rounded">
@@ -472,11 +469,10 @@ foreach ($mains['Table1'] as $attds){
                         </table>
                     </div>
 
-                    
-                    
+                 
                     <div class="col-md-12">
                         <div style="color:green" class="col-md-2">
-                            <h4><a href="https://instagram.com/nadits.in">Developed by Nithin Godugu</a></h4>
+                            <!--h4>Developed by Nithin Godugu</h4-->
                         </div>
                        
                     </div>
