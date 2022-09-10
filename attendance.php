@@ -386,6 +386,37 @@ if($pin==''){
                             </thead>
                             <tbody>
                               <?php
+      
+      
+                                 
+$array = json_decode($mains['Table1'], TRUE );
+
+
+$a=array();
+
+$mr = 0;
+
+$stringm = '{"Table1":[';
+foreach($mains['Table1'] as $r1 =>  $v){
+
+$month = $mains['Table1'][$r1]['AttendanceMonth'];
+if (in_array($month, $a)){
+
+//Do nothing 
+}else{
+$mr = $mr +1;
+array_push($a,$mr,$month);
+$stringm = $stringm.'{"M":"'.$month.'"},';
+ }
+}
+
+
+$stringm = substr($stringm, 0, -1).']}';
+
+
+$mon = json_encode($a, true);
+
+      
                               $s1 = '{"Table1":[{"M":"January"},{"M":"February"},{"M":"March"},{"M":"April"},{"M":"May"},{"M":"June"},{"M":"July"},{"M":"August"},{"M":"September"},{"M":"October"},{"M":"November"},{"M":"December"}]}';
 $s2 = '{"Table2":[{"d":"01"},{"d":"02"},{"d":"03"},{"d":"04"},{"d":"05"},{"d":"06"},{"d":"07"},{"d":"08"},{"d":"09"},{"d":"10"},{"d":"11"},{"d":"12"},{"d":"13"},{"d":"14"},{"d":"15"},{"d":"16"},{"d":"17"},{"d":"18"},{"d":"19"},{"d":"20"},{"d":"21"},{"d":"22"},{"d":"23"},{"d":"24"},{"d":"25"},{"d":"26"},{"d":"27"},{"d":"28"},{"d":"29"},{"d":"30"},{"d":"31"}]}';
 
