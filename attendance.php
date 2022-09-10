@@ -388,33 +388,8 @@ if($pin==''){
                               <?php
       
       
-                                 
-$array = json_decode($mains['Table1'], TRUE );
 
 
-$a=array();
-
-$mr = 0;
-
-$stringm = '{"Table1":[';
-foreach($mains['Table1'] as $r1 =>  $v){
-
-$month = $mains['Table1'][$r1]['AttendanceMonth'];
-if (in_array($month, $a)){
-
-//Do nothing 
-}else{
-$mr = $mr +1;
-array_push($a,$mr,$month);
-$stringm = $stringm.'{"M":"'.$month.'"},';
- }
-}
-
-
-$stringm = substr($stringm, 0, -1).']}';
-
-
-$mon = json_encode($a, true);
 
       
                               $s1 = '{"Table1":[{"M":"January"},{"M":"February"},{"M":"March"},{"M":"April"},{"M":"May"},{"M":"June"},{"M":"July"},{"M":"August"},{"M":"September"},{"M":"October"},{"M":"November"},{"M":"December"}]}';
