@@ -374,12 +374,71 @@ if($pin==''){
 
                 <div ng-show="ResultFound" class="">               
 
-                    <div class="col-md-12">
+                    
+                    
+                            
+                
+                <div class="col-md-12">
                         <table class="table table-bordered  table-striped table-rounded">
-                           
-                          
+                            <thead>
+                                <tr class="cb-1">
+                                    <th style="width: 4%">Sc no</th>
+                                    <th style="width: 5%">Month</th>
+                                    <!-- ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">01</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">02</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">03</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">04</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">05</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">06</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">07</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">08</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">09</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">10</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">11</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">12</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">13</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">14</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">15</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">16</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">17</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">18</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">19</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">20</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">21</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">22</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">23</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">24</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">25</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">26</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">27</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">28</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">29</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">30</b></th><!-- end ngRepeat: day in days --><th style="width: 1%" ng-repeat="day in days" class="ng-scope"><b class="ng-binding">31</b></th><!-- end ngRepeat: day in days -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <?php
+                              $s1 = '{"Table1":[{"M":"January"},{"M":"February"},{"M":"March"},{"M":"April"},{"M":"May"},{"M":"June"},{"M":"July"},{"M":"August"},{"M":"September"},{"M":"October"},{"M":"November"},{"M":"December"}]}';
+$s2 = '{"Table2":[{"d":"1"},{"d":"2"},{"d":"3"},{"d":"4"},{"d":"5"},{"d":"6"},{"d":"7"},{"d":"8"},{"d":"9"},{"d":"10"},{"d":"11"},{"d":"12"},{"d":"13"},{"d":"14"},{"d":"15"},{"d":"16"},{"d":"17"},{"d":"19"},{"d":"19"},{"d":"20"},{"d":"21"},{"d":"22"},{"d":"23"},{"d":"24"},{"d":"25"},{"d":"26"},{"d":"27"},{"d":"28"},{"d":"29"},{"d":"30"},{"d":"31"}]}';
+
+$s1d = json_decode($s1,true);
+$s2d = json_decode($s2,true);
+
+
+$monthsl = 0;
+
+
+foreach ($s1d['Table1'] as $s1s){
+   $monthsl = $monthsl+1; 
+    
+    echo ' <!-- ngRepeat: x in attendancedata --><tr ng-repeat="x in attendancedata" class="ng-scope">
+                                    <td class="ng-binding">'.$monthsl.'</td>
+                                    <td class="ng-binding">'.$s1s['M'].'</td>
+                                
+                            ';
+                            
+                            foreach ($s2d['Table2'] as $s2s){
+                                
+                                 
+                                
+                                echo '<td style="width: 1%" ng-repeat="y in x.attstat" class="ng-binding ng-scope" id="'.$s1s['M'].$s2s['d'].'">-</td>';
+                            }
+   
+    
+}
+
+
+
+
+
+foreach ($mains['Table1'] as $attds){
+    
+    $elid = $attds['AttendanceMonth'].$attds['Day'];
+    
+   echo '<script> document.getElementById("'.$elid.'").innerHTML = "'.$attds['Status'].'"; </script>';
+
+
+
+    
+}
+?>
+                            </tbody>
                         </table>
                     </div>
+
+                    
+                    
                     <div class="col-md-12">
                         <div style="color:green" class="col-md-2">
                             <h4><a href="https://instagram.com/nadits.in">Developed by Nithin Godugu</a></h4>
