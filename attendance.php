@@ -387,25 +387,13 @@ if($pin==''){
                             <tbody>
                               <?php
       
-     $stringm= '{"Table1":['; 
-
-foreach ($mains['Table1'] as $strs){
-if (str_contains($stringm, $strs['AttendanceMonth'])) { 
-    
-}else{
-$stringm=$stringm.'{"M":"'.$strs['AttendanceMonth'].'"},';
-
-}
-$stringm = substr($stringm, 0, -1).']}';
-
-      }
 
 
 
                               $s1 = '{"Table1":[{"M":"January"},{"M":"February"},{"M":"March"},{"M":"April"},{"M":"May"},{"M":"June"},{"M":"July"},{"M":"August"},{"M":"September"},{"M":"October"},{"M":"November"},{"M":"December"}]}';
 $s2 = '{"Table2":[{"d":"01"},{"d":"02"},{"d":"03"},{"d":"04"},{"d":"05"},{"d":"06"},{"d":"07"},{"d":"08"},{"d":"09"},{"d":"10"},{"d":"11"},{"d":"12"},{"d":"13"},{"d":"14"},{"d":"15"},{"d":"16"},{"d":"17"},{"d":"18"},{"d":"19"},{"d":"20"},{"d":"21"},{"d":"22"},{"d":"23"},{"d":"24"},{"d":"25"},{"d":"26"},{"d":"27"},{"d":"28"},{"d":"29"},{"d":"30"},{"d":"31"}]}';
 
-$s1d = json_decode($stringm,true);
+$s1d = json_decode($s1,true);
 $s2d = json_decode($s2,true);
 
 
