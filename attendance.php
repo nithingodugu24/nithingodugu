@@ -443,7 +443,7 @@ foreach ($mains['Table1'] as $attds){
                  
                     <div class="col-md-12">
                         <div style="color:green" class="col-md-2">
-                            <!--h4>Developed by Nithin Godugu</h4-->
+                            <h4 href="https://instagram.com/offi_nithingodugu">Developed by Nithin Godugu</h4>
                         </div>
                        
                     </div>
