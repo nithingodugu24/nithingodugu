@@ -270,9 +270,9 @@ if($pin==''){
                                 <div class="col-lg-10 col-md-12 col-sm-9">
                                     <div class="logo-name">
                                         <h3 >
-                                            STATE BOARD OF TECHNICAL EDUCATION AND TRAINING TELANGANA
+                                           &nbsp &nbsp &nbsp &nbsp STATE BOARD OF TECHNICAL EDUCATION AND TRAINING TELANGANA
                                         </h3>
-                                        <!--<h2><p style="text-align: center">STATE BOARD OF TECHNICAL EDUCATION AND TRAINING <br /><p style="text-align: center">TELANGANA</p></h2>-->
+                                        <!--<h2><p style="text-align: center">&nbsp &nbsp &nbsp &nbspSTATE BOARD OF TECHNICAL EDUCATION AND TRAINING <br /><p style="text-align: center">TELANGANA</p></h2>-->
                                     </div>
                                 </div>
                             </div>
