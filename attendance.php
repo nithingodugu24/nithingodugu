@@ -280,7 +280,7 @@ if($pin==''){
                         <div class="col-sm-12">
 
                             <div class="card-title">
-                                <h2><bold id="tesxthead">Student Attendance  Summary</bold></h2>
+                                <h2><bold id="tesxthead">💥 MECHANICAL 💥 Student Attendance  Summary</bold></h2>
                             </div>
                         </div>
 
