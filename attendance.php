@@ -264,7 +264,7 @@ if($pin==''){
                             <div class="row" style="width: 145%;">
                                 <div class="col-lg-2 col-md-12 col-sm-3">
                                     <div class="logo-img">
-                                        <img src="https://exams.sbtet.telangana.gov.in/contents/img/big-logo.png">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtzIUg8UMh903oQkWPFwM9zRBlfiqmyTldA&usqp=CAU">
                                     </div>
                                 </div>
                                 <div class="col-lg-10 col-md-12 col-sm-9">
