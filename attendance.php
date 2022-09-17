@@ -264,7 +264,7 @@ if($pin==''){
                             <div class="row" style="width: 145%;">
                                 <div class="col-lg-2 col-md-12 col-sm-3">
                                     <div class="logo-img">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtzIUg8UMh903oQkWPFwM9zRBlfiqmyTldA&usqp=CAU">
+                                        <img src="http://vmrpolytechnic.com/img/deparments/WhatsApp_Image_2020-05-03_at_6-removebg-preview.png">
                                     </div>
                                 </div>
                                 <div class="col-lg-10 col-md-12 col-sm-9">
