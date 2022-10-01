@@ -41,7 +41,27 @@ if($pin==''){
     <title>Sbtet Attendance -Developed by Nithin Godugu</title>
 
     <!-- Bootstrap CSS -->
+
     <link href="https://exams.sbtet.telangana.gov.in//contents/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Syncfusion Theames-->
+    <!--<link href="contents/css/syncfusion/themes/gradient-azure/ej.web.all.min.css" rel="stylesheet" />-->
+    <!-- font CSS -->
+    <link href="https://sbtet.telangana.gov.in/contents/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!--Application-->
+    <link href="https://sbtet.telangana.gov.in/contents/css/style.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/responsive.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/dashboard/googleapis1.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/dashboard/googleapis2.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/dashboard/plugins/datatables/datatables.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/dashboard/style.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/dashboard/mystyle.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/dashboard/style_for_forms.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/dashboard/applicationdashboard.css" rel="stylesheet">
+    <link href="https://sbtet.telangana.gov.in/contents/css/main.css" rel="stylesheet">
+
+    <link href="https://sbtet.telangana.gov.in//contents/css/bootstrap.min.css" rel="stylesheet">
 
     <!--Syncfusion Theames-->
     <!--<link href="contents/css/syncfusion/themes/gradient-azure/ej.web.all.min.css" rel="stylesheet" />-->
