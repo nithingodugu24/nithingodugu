@@ -1,6 +1,6 @@
 <?php
 $pin = $_REQUEST['pin'];
-$url = "https://exams.sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=$pin";
+$url = "https://sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=$pin";
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
