@@ -10,7 +10,7 @@ $s1d = json_decode($s1,true);
 foreach($s1d['Table1'] as $pin1){
 $pin = $pin1['M'];
 
-
+echo $pin;
 $url = "https://exams.sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=$pin";
 
 $curl = curl_init($url);
@@ -45,6 +45,7 @@ $cid = "@vmrmecattbot";
 
 
 $url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=".$cid."&text=".$botmessage;
+echo $url2;
 $furl = file_get_contents($url2);
 echo $furl;
 
