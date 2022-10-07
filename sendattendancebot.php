@@ -10,7 +10,7 @@ $s1d = json_decode($s1,true);
 foreach($s1d['Table1'] as $pin1){
 $pin = $pin1['M'];
 
-echo $pin;
+
 $url = "https://exams.sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=$pin";
 
 $curl = curl_init($url);
@@ -40,8 +40,8 @@ $matt = $mains['Table'][0]['NumberOfDaysPresent'] /90*100;
 $botmessage = 'Attendance Report : %0APin  : '.$mains['Table'][0]['Pin'].'%0AName : '.$mains['Table'][0]['Name'].'%0APresent Days : '.$mains['Table'][0]['NumberOfDaysPresent'].'%0AWeekly Attendance: '.$mains['Table'][0]['Percentage'].'%0AMain Attendance : '.round($matt).'';
 
 
-$botmessage1= 'Pin='.$mains['Table'][0]['Pin'].' %0A Attendance : '.round($matt).'';
 $cid = "@vmrmecattbot";
+echo $botmessage;
 
 $url = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=".$cid."&text=".$botmessage;
 
