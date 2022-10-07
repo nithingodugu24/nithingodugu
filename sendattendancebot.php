@@ -42,20 +42,20 @@ $botmessage = 'Attendance Report : %0APin  : '.$mains['Table'][0]['Pin'].'%0ANam
 
 $cid = "@vmrmecattbot";
 
-$url = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=".$cid."&text=".$botmessage;
-echo $url;
+$url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=".$cid."&text=".$botmessage;
+echo $url2;
 
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$curl2 = curl_init($url2);
+curl_setopt($curl2, CURLOPT_URL, $url2);
+curl_setopt($curl2, CURLOPT_RETURNTRANSFER, true);
 
 //for debug only!
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl2, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($curl2, CURLOPT_SSL_VERIFYPEER, false);
 
-$resp = curl_exec($curl);
-curl_close($curl);
+$resp22 = curl_exec($curl2);
+curl_close($curl2);
 
-echo $resp;
+echo $resp22;
 
 }
