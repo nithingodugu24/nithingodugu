@@ -41,9 +41,9 @@ $botmessage = 'Attendance Report : %0APin  : '.$mains['Table'][0]['Pin'].'%0ANam
 
 
 $cid = "@vmrmecattbot";
-echo $botmessage;
 
 $url = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=".$cid."&text=".$botmessage;
+echo $url;
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
@@ -55,10 +55,6 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
-
-$jsondec = json_decode($resp, true);
-$jsondec = json_decode($resp, true);
-$fn = $jsondec['ok'];
 
 echo $resp;
 
