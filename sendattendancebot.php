@@ -48,17 +48,5 @@ $url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7C
 $furl = file_get_contents($url2);
 echo $furl;
 
-$curl2 = curl_init($url2);
-curl_setopt($curl2, CURLOPT_URL, $url2);
-curl_setopt($curl2, CURLOPT_RETURNTRANSFER, true);
-
-//for debug only!
-curl_setopt($curl2, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl2, CURLOPT_SSL_VERIFYPEER, false);
-
-$resp22 = curl_exec($curl2);
-curl_close($curl2);
-
-echo $resp22;
 
 }
