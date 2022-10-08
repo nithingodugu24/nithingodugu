@@ -46,7 +46,7 @@ $cid = "@vmrmecattbot";
 $url = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text=".$botmessage."";
 $url2 = 'https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text='.urldecode($botmessage).'';
 
-file_get_contents($url);
+
 
 
 $filename = "http://www.myothersite.com/canvar.php?tid=635";
@@ -55,17 +55,6 @@ $fcontents = fread($handle, filesize($filename));
 fclose($handle);
 echo $fcontents;
 
-
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-//for debug only!
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-$resp = curl_exec($curl);
-curl_close($curl);
 
 
 
