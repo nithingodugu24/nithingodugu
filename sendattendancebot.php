@@ -44,15 +44,7 @@ $cid = "@vmrmecattbot";
 
 
 
-$url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=".$cid."&text=".$botmessage;
-echo $url2;
-$furl = file_get_contents($url2);
-echo $furl;
-
-
-}
-
-$url = "https://exams.sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=21090-ME-053";
+$url = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text=Attendance";
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
@@ -64,24 +56,7 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
-
-$resp2 = substr($resp, 1, -1);
-
-$resp2 = str_replace("\\", "", $resp2);
-
-
-
-$mains = json_decode($resp2, true);
-
-
-$matt = $mains['Table'][0]['NumberOfDaysPresent'] /90*100;
- 
-
-
-$botmessage = 'Attendance Report : %0APin  : '.$mains['Table'][0]['Pin'].'%0AName : '.$mains['Table'][0]['Name'].'%0APresent Days : '.$mains['Table'][0]['NumberOfDaysPresent'].'%0AWeekly Attendance: '.$mains['Table'][0]['Percentage'].'%0AMain Attendance : '.round($matt).'';
-
-
-$cid = "@vmrmecattbot";
+var_dump($resp);
 
 
 
@@ -89,3 +64,7 @@ $url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7C
 echo $url2;
 $furl = file_get_contents($url2);
 echo $furl;
+
+
+}
+
