@@ -10,7 +10,7 @@ $s1d = json_decode($s1,true);
 foreach($s1d['Table1'] as $pin1){
 $pin = $pin1['M'];
 
-echo $pin;
+
 $url = "https://exams.sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=$pin";
 
 $curl = curl_init($url);
@@ -43,9 +43,10 @@ $botmessage = 'Attendance Report : %0APin  : '.$mains['Table'][0]['Pin'].'%0ANam
 $cid = "@vmrmecattbot";
 
 
-$url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text=".$botmessage;
+$url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text=".$botmessage."";
 $url = 'https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text='.urldecode($botmessage).'';;
 
+file_get_contents($url2);
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -56,13 +57,7 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
-var_dump($resp);
-echo curl_getinfo($curl) . '<br/>';
-echo curl_errno($curl) . '<br/>';
-echo curl_error($curl) . '<br/>';
 
-
-echo $url;
 
 
 }
