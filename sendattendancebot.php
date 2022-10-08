@@ -43,10 +43,10 @@ $botmessage = 'Attendance Report : %0APin  : '.$mains['Table'][0]['Pin'].'%0ANam
 $cid = "@vmrmecattbot";
 
 
-$url2 = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text=".$botmessage."";
-$url = 'https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text='.urldecode($botmessage).'';;
+$url = "https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text=".$botmessage."";
+$url2 = 'https://api.telegram.org/bot5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI/sendMessage?chat_id=@vmrmecattbot&text='.urldecode($botmessage).'';
 
-file_get_contents($url2);
+file_get_contents($url);
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
