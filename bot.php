@@ -549,7 +549,7 @@ $API_TOKEN = "5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI";
 ///Send Message (Global)
     function send_message($chat_id,$message_id, $message){
         $text = urlencode($message);
-        $apiToken = $API_TOKEN';  
+        $apiToken = $API_TOKEN;  
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text");
     }
     
