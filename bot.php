@@ -545,7 +545,7 @@ Checked By @$username ***");
         send_message($chat_id,$message_id, "Invalid Input");
     }
 }
-$API_TOKEN = "";
+$API_TOKEN = "5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI";
 ///Send Message (Global)
     function send_message($chat_id,$message_id, $message){
         $text = urlencode($message);
