@@ -10,7 +10,7 @@
     $id = $update["message"]["from"]["id"];
     $username = $update["message"]["from"]["username"];
     $firstname = $update["message"]["from"]["first_name"];
-    $chatname = $_ENV['CHAT']; 
+    $chatname = '@vmrmecattbot'; 
  /// for broadcasting in Channel
 $channel_id = "-100xxxxxxxxxx";
 
