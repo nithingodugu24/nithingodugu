@@ -18,6 +18,7 @@ date_default_timezone_set("Asia/kolkata");
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=973566639&text=$postdata");
 
 if($message == "/start"){
+echo "ok";
         send_message($chat_id,$message_id, "Hey $firstname \nUse /cmds to view commands \n$chatname");
     }
 
