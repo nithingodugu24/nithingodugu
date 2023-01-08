@@ -18,12 +18,12 @@ date_default_timezone_set("Asia/kolkata");
 
 if($message == "/start"){
 echo "ok";
-        send_message($chat_id,$message_id, "Hey $firstname \nUse /cmds to view commands \n$chatname");
+        send_message($apiToken,$chat_id,$message_id, "Hey $firstname \nUse /cmds to view commands \n$chatname");
     }
 
 
-///Send Message (Global)
-    function send_message($chat_id,$message_id, $message){
+
+    function send_message($apiToken,$chat_id,$message_id, $message){
         $text = urlencode($message);
           
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text");
