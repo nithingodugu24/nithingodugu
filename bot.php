@@ -71,7 +71,7 @@ Main Attendance : $mainatt
 Checked By @$username ***");
 }
 else {
-           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number");
+           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$resp);
 }
     }
 
