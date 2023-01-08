@@ -35,16 +35,9 @@ if(strpos($message, "/attendance") === 0){
 
 $url = "https://exams.sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=".$location."";
 
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-//for debug only!
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+$resp = file_get_contents($url);
 
-$resp = curl_exec($curl);
-curl_close($curl);
 
 $resp2 = substr($resp, 1, -1);
 
