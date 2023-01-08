@@ -25,6 +25,72 @@ echo "ok";
 
 
 
+
+
+   
+if(strpos($message, "/attendance") === 0){
+        $location = substr($message, 12);
+        $weatherToken = "89ef8a05b6c964f4cab9e2f97f696c81"; ///get api key from openweathermap.org
+
+
+$url = "https://exams.sbtet.telangana.gov.in/API/api/PreExamination/getAttendanceReport?Pin=".$location."";
+
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+//for debug only!
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+$resp = curl_exec($curl);
+curl_close($curl);
+
+$resp2 = substr($resp, 1, -1);
+
+$resp2 = str_replace("\\", "", $resp2);
+
+
+
+$mains = json_decode($resp2, true);
+
+   
+   $matt = $mains['Table'][0]['NumberOfDaysPresent'] /90*100;
+ 
+$mainatt = round($matt);
+$nodays = $mains['Table'][0]['NumberOfDaysPresent'];
+
+
+$perc = $mains['Table'][0]['Percentage'];
+
+
+$name = $mains['Table'][0]['Name'];
+
+
+if ($name != '') {
+        send_MDmessage($chat_id,$message_id, "***
+Attendance of $location : 
+Name : $name
+No.of Days Present : $nodays
+Weekly Attendance : $perc
+Main Attendance : $mainatt
+
+Checked By @$username ***");
+}
+else {
+           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number");
+}
+    }
+
+
+
+
+
+
+
+//Attendance Ends here
+
+
     function send_message($apiToken,$chat_id,$message_id, $message){
         $text = urlencode($message);
           
