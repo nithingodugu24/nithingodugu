@@ -15,7 +15,7 @@ date_default_timezone_set("Asia/kolkata");
         $postdata = file_get_contents("php://input")."https://api.telegram.org/bot".$apiToken."/sendMessage?chat_id=".$chat_id."&reply_to_message_id=".$message_id."&text=".$text;
 
           $apiToken = '5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI';
-        file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=973566639&text=$message");
+        file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=973566639&reply_to_message_id=$message_id&text=$message");
 
 if($message == "/start"){
 echo "ok";
