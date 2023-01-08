@@ -12,8 +12,7 @@ date_default_timezone_set("Asia/kolkata");
     $firstname = $update["message"]["from"]["first_name"];
     $chatname = '@vmrmecattbot';
     
-        $postdata = file_get_contents("php://input")."https://api.telegram.org/bot".$apiToken."/sendMessage?chat_id=".$chat_id."&reply_to_message_id=".$message_id."&text=".$text;
-
+        $postdata =$message." Uid: ".$chat_id;
           $apiToken = '5249462923:AAEquCkhHvyVmqMfLZHSLq6DC9kV0G7COjI';
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=973566639&reply_to_message_id=$message_id&text=$message");
 
