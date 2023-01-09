@@ -56,7 +56,7 @@ $mains = json_decode($resp2, true);
 
 
 
-$matt = $mains['Table'][0]['NumberOfDaysPresent'] /90*100;
+$matt = $mains['Table'][0]['NumberOfDaysPresent'] ;
  
 $mainatt = round($matt);
 $nodays = $mains['Table'][0]['NumberOfDaysPresent'];
@@ -73,7 +73,7 @@ $name = $mains['Table'][0]['Name'];
 
 
            
-           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$name);
+           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$name.$perc);
 
     
     }
