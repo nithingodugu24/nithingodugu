@@ -60,7 +60,7 @@ $name = $mains['Table'][0]['Name'];
 
 
            if ($name != '') {
-        send_MDmessage($chat_id,$message_id, "***
+        send_MDmessage($apiToken,$chat_id,$message_id, "***
 Attendance of $location : 
 Name : $name
 No.of Days Present : $nodays
@@ -70,7 +70,7 @@ Main Attendance : $mainatt
 Checked By @$username ***");
 }
 else {
-           send_message($chat_id,$message_id, "Invalid Pin number");
+           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number");
 }
     
     }
