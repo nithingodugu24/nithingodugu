@@ -47,7 +47,7 @@ curl_close($curl);
 
 
 
-           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$url);
+           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$resp);
 
     }
 
