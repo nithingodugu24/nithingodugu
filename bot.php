@@ -57,15 +57,24 @@ $mains = json_decode($resp2, true);
 $name = $mains['Table'][0]['Name'];
 
 
+  
+
+$nodays = $mains['Table'][0]['NumberOfDaysPresent'];
+
+
+$perc = $mains['Table'][0]['Percentage'];
+
+
+$name = $mains['Table'][0]['Name'];
+
 
 
            if ($name != '') {
         send_MDmessage($apiToken,$chat_id,$message_id, "***
-Attendance of $location : 
+Attendance of $pin : 
 Name : $name
 No.of Days Present : $nodays
-Weekly Attendance : $perc
-Main Attendance : $mainatt
+Total Attendance : $perc
 
 Checked By @$username ***");
 }
