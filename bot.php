@@ -39,28 +39,15 @@ $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-//for debug only!
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
 
-$resp2 = substr($resp, 1, -1);
-
-$resp2 = str_replace("\\", "", $resp2);
-
-
-
-$mains = json_decode($resp2, true);
-
-
-$name = $mains['Table'][0]['Name'];
 
 
 
 
-           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$resp);
+           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$url);
 
     }
 
