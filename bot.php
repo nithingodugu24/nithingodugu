@@ -65,18 +65,10 @@ $nodays = $mains['Table'][0]['NumberOfDaysPresent'];
 $perc = $mains['Table'][0]['Percentage'];
 
 
-$name = $mains['Table'][0]['Name'];
-
 
 
            if ($name != '') {
-        send_MDmessage($apiToken,$chat_id,$message_id, "***
-Attendance of $pin : 
-Name : $name
-No.of Days Present : $nodays
-Total Attendance : $perc
-
-Checked By @$username ***");
+        send_MDmessage($apiToken,$chat_id,$message_id, "Name : ".$name."");
 }
 else {
            send_message($apiToken,$chat_id,$message_id, "Invalid Pin number");
