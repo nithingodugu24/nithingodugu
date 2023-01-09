@@ -26,7 +26,7 @@ $headers = array(
 );
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-$data = '{"chat_id":".$chat_id.","action":"typing","message_thread_id":".$message_id."}';
+$data = '{"chat_id":"'.$chat_id.'","action":"typing","message_thread_id":"'.$message_id.'"}';
 
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
