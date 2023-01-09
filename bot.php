@@ -59,8 +59,20 @@ $name = $mains['Table'][0]['Name'];
 
 
 
-           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$name);
+           if ($name != '') {
+        send_MDmessage($chat_id,$message_id, "***
+Attendance of $location : 
+Name : $name
+No.of Days Present : $nodays
+Weekly Attendance : $perc
+Main Attendance : $mainatt
 
+Checked By @$username ***");
+}
+else {
+           send_message($chat_id,$message_id, "Invalid Pin number");
+}
+    
     }
 
 
