@@ -73,7 +73,7 @@ $name = $mains['Table'][0]['Name'];
 
 if($name!=''){
 
-send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$name.$perc);
+send_message($apiToken,$chat_id,$message_id, "Your Attendance Report: \nPin: ".$pin."\nName: ".$name."\nNo.of days present: "$nodays."\nTotal Percentage: ".$perc);
 
 }else{
 
