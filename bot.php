@@ -71,10 +71,16 @@ $name = $mains['Table'][0]['Name'];
   
 
 
+if($name!=''){
+
+send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$name.$perc);
+
+}else{
 
            
-           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number".$name.$perc);
+           send_message($apiToken,$chat_id,$message_id, "Invalid Pin number");
 
+}
     
     }
 
